@@ -6,10 +6,10 @@ const app = express();
 
 // Configure MySQL connection
 const db = mysql.createConnection({
-      host: 'sql12.freesqldatabase.com',
-  user: 'sql12668173',
-  password: 'Aj6XW8NLig',
-  database: 'sql12668173'
+      host: 'database-2.crus4vmhm48u.us-east-1.rds.amazonaws.com',
+  user: 'admin',
+  password: 'password',
+  database: 'database-1'
 });
 
 
