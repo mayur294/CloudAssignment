@@ -1,14 +1,37 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
   margin: 20px;
+  background-color: #f8f8f8;
 }
 
 h1 {
   text-align: center;
+  color: #333;
 }
 
 form {
   margin-bottom: 20px;
+  text-align: center;
+}
+
+input[type="text"] {
+  padding: 8px;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px 15px;
+  font-size: 16px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
 }
 
 ul {
@@ -17,18 +40,20 @@ ul {
 }
 
 li {
-  background-color: #f4f4f4;
-  margin: 5px 0;
-  padding: 10px;
+  background-color: #fff;
+  margin: 10px 0;
+  padding: 15px;
   border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: fadeIn 0.5s ease;
 }
 
-button {
-  padding: 5px 10px;
-  cursor: pointer;
+li span {
+  flex-grow: 1;
 }
-
-/* Add this CSS to the end of the file */
 
 button.delete {
   background-color: #e74c3c;
@@ -36,16 +61,61 @@ button.delete {
   border: none;
   cursor: pointer;
   border-radius: 4px;
+  transition: background-color 0.3s ease;
 }
 
 button.delete:hover {
   background-color: #c0392b;
 }
-/* Add this CSS to the end of the file */
 
 span.datetime {
   font-size: 12px;
   color: #888;
   margin-top: 5px;
   display: block;
+}
+
+/* Add fadeIn animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Popup styles */
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.popup h2 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.popup button {
+  padding: 8px 12px;
+  margin-top: 10px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.popup button:hover {
+  background-color: #45a049;
 }
